@@ -1,213 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper ID: XXX - Audio Samples</title>
-    <style>
-        /* CSS STYLING */
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --bg: #f8f9fa;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--bg);
-            color: #333;
-        }
-        .container {
-            max_width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        h1 { margin: 0; color: var(--primary); }
-        .authors { color: #666; font-style: italic; margin-top: 10px; }
-        
-        /* TABS */
-        .tab-nav {
-            overflow: hidden;
-            border-bottom: 2px solid #ddd;
-            margin-bottom: 20px;
-        }
-        .tab-nav button {
-            background-color: transparent;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 20px;
-            transition: 0.3s;
-            font-size: 16px;
-            font-weight: bold;
-            color: #555;
-        }
-        .tab-nav button:hover { background-color: #f1f1f1; color: var(--secondary); }
-        .tab-nav button.active { border-bottom: 3px solid var(--secondary); color: var(--secondary); }
+<meta charset="UTF-8">
+<title>Augmented Dysarthric Speech Samples - Paper ID XXX</title>
 
-        /* TABLES */
-        .dataset-content {
-            display: none;
-            animation: fadeEffect 0.5s;
-        }
-        .dataset-content.active-content { display: block; }
-        
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background-color: #f8f9fa; color: var(--primary); width: 15%; }
-        
-        /* AUDIO PLAYER STYLING */
-        audio {
-            width: 260px;
-            height: 40px;
-        }
-        
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-    </style>
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.dataset {
+    background: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #222;
+    color: white;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+audio {
+    width: 100%;
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <h1>Paper ID: XXX - Augmented Dataset Samples</h1>
-        <p class="authors">Author 1, Author 2, Author 3</p>
-        <p>Comparison of Dysarthric Speech Severity Classification Datasets</p>
-    </header>
+<h1>Augmented Dysarthric Speech Samples</h1>
+<h3 style="text-align:center">Paper ID: XXX</h3>
 
-    <div class="tab-nav">
-        <button class="tab-btn active" onclick="openTab(event, 'TORGO')">TORGO</button>
-        <button class="tab-btn" onclick="openTab(event, 'UA-SPEECH')">UA-SPEECH</button>
-        <button class="tab-btn" onclick="openTab(event, 'KDAH')">KDAH</button>
-    </div>
+<p style="text-align:center">
+<b>Authors:</b> Your Name, Co-Author 1, Co-Author 2
+</p>
 
-    <div id="TORGO" class="dataset-content active-content">
-        <h2>TORGO Dataset</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sample ID</th>
-                    <th>Original</th>
-                    <th>BigVGAN</th>
-                    <th>HiFi-GAN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sev_1_F04...0230</td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0230.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0230_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0230_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-                <tr>
-                    <td>Sev_1_F04...0231</td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0231.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0231_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0231_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-                <tr>
-                    <td>Sev_1_F04...0250</td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0250.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0250_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="TORGO/Sev_1_F04_Session2_wavHeadMic_0250_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-                
-                </tbody>
-        </table>
-    </div>
+<hr>
 
-    <div id="UA-SPEECH" class="dataset-content">
-        <h2>UA-SPEECH Dataset</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sample ID</th>
-                    <th>Original</th>
-                    <th>BigVGAN</th>
-                    <th>HiFi-GAN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>F05_B1_C1_M3</td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/F05_B1_C1_M3.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/F05_B1_C1_M3_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/F05_B1_C1_M3_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-                <tr>
-                    <td>M09_B1_CW63_M3</td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B1_CW63_M3.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B1_CW63_M3_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B1_CW63_M3_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-                <tr>
-                    <td>M09_B3_CW92_M3</td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B3_CW92_M3.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B3_CW92_M3_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="UA-SPEECH/M09_B3_CW92_M3_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-
-                 </tbody>
-        </table>
-    </div>
-
-    <div id="KDAH" class="dataset-content">
-        <h2>KDAH Dataset</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sample ID</th>
-                    <th>Original</th>
-                    <th>BigVGAN</th>
-                    <th>HiFi-GAN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Example_File_01</td>
-                    <td><audio controls preload="none"><source src="KDAH/example.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="KDAH/example_bigvgan.wav" type="audio/wav"></audio></td>
-                    <td><audio controls preload="none"><source src="KDAH/example_hifigan.wav" type="audio/wav"></audio></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</div>
+<div id="content"></div>
 
 <script>
-    function openTab(evt, datasetName) {
-        // 1. Hide all tab content
-        var i, content, tablinks;
-        content = document.getElementsByClassName("dataset-content");
-        for (i = 0; i < content.length; i++) {
-            content[i].style.display = "none";
-            content[i].classList.remove("active-content");
-        }
+const datasets = ["UA-SPEECH", "TORGO", "KDAH"];
 
-        // 2. Remove "active" class from all buttons
-        tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
+const files = {
+"UA-SPEECH": [
+"F05_B1_C1_M3",
+"M09_B1_CW63_M3",
+"M09_B3_CW92_M3"
+],
 
-        // 3. Show the current tab and add "active" class to the clicked button
-        document.getElementById(datasetName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
+"TORGO": [
+"Sev_1_F04_Session2_wavHeadMic_0230",
+"Sev_1_F04_Session2_wavHeadMic_0231",
+"Sev_1_F04_Session2_wavHeadMic_0250"
+],
+
+"KDAH": [
+"sample1",
+"sample2"
+]
+};
+
+let html = "";
+
+datasets.forEach(ds => {
+  html += `<div class="dataset"><h2>${ds}</h2>`;
+  html += `<table>
+    <tr>
+      <th>Sample</th>
+      <th>Original</th>
+      <th>HiFi-GAN</th>
+      <th>BigVGAN</th>
+    </tr>`;
+
+  files[ds].forEach(f => {
+    html += `<tr>
+      <td>${f}</td>
+      <td><audio controls preload="none"><source src="${ds}/${f}.wav" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="${ds}/${f}_hifigan.wav" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="${ds}/${f}_bigvgan.wav" type="audio/wav"></audio></td>
+    </tr>`;
+  });
+
+  html += "</table></div>";
+});
+
+document.getElementById("content").innerHTML = html;
 </script>
 
 </body>

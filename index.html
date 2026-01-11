@@ -104,6 +104,7 @@ audio{width:260px;}
 <button class="tab-btn active" onclick="openTab(event,'TORGO')">TORGO</button>
 <button class="tab-btn" onclick="openTab(event,'UA')">UA-SPEECH</button>
 <button class="tab-btn" onclick="openTab(event,'DAU')">DAU-KDAH</button>
+<button class="tab-btn" onclick="openTab(event,'TSNE')">t-SNE Plots</button>
 </div>
 
 <!-- ================= TORGO ================= -->
@@ -168,9 +169,28 @@ audio{width:260px;}
 <div id="DAU" class="dataset-content">
 <h2>DAU-KDAH</h2>
 <div class="notice-box">
-DAU-KDAH samples are unavailable due to medical data permissions.
+DAU-KDAH samples are unavailable due to restrictions on medical data access.
 </div>
 </div>
+
+    <!-- ================= t-SNE ================= -->
+<div id="TSNE" class="dataset-content">
+<h2>t-SNE Visualization (WavLM Embeddings)</h2>
+
+<p style="max-width:900px;line-height:1.6;color:#444;">
+Across TORGO, KDAH, and UA-Speech, BigVGAN and HiFiGAN stay close to the original dysarthric speech in the t-SNE space, showing that they preserve key prosodic and linguistic traits such as timing, rhythm, and imperfect articulation. Their strong overlap with real data suggests they keep the speech patterns needed for severity analysis. In contrast, XTTS forms a clearly separate cluster, meaning it smooths out these cues and produces more fluent, normalized speech, which no longer reflects the true dysarthric speaking style.
+</p>
+
+<h3>TORGO</h3>
+<img src="tsne_TORGO.png" style="width:100%;max-width:900px;border:1px solid #ccc;border-radius:6px;margin-bottom:25px;">
+
+<h3>DAU-KDAH</h3>
+<img src="tsne_KDAH.png" style="width:100%;max-width:900px;border:1px solid #ccc;border-radius:6px;margin-bottom:25px;">
+
+<h3>UA-Speech</h3>
+<img src="tsne_UA_Speech.png" style="width:100%;max-width:900px;border:1px solid #ccc;border-radius:6px;margin-bottom:25px;">
+</div>
+
 
 </div>
 
